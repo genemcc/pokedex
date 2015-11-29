@@ -160,7 +160,7 @@
                     <connections>
                         <outlet property="collection" destination="AOW-ft-0Zl" id="z5w-qq-dtd"/>
                         <outlet property="searchBar" destination="W8f-bo-evG" id="nxw-wt-XuL"/>
-                        <segue destination="ht3-QT-X5O" kind="show" identifier="PokemonDetailVC" id="eej-Us-eAu"/>
+                        <segue destination="ht3-QT-X5O" kind="show" identifier="PokemonDetailVC" id="hPr-gh-lai"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -204,6 +204,9 @@
                                         <state key="normal" title="&lt; Back">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="ht3-QT-X5O" eventType="touchUpInside" id="NjL-xC-1jZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <animations/>
@@ -231,10 +234,10 @@
                                         </segments>
                                         <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="g7b-Al-NEB">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="g7b-Al-NEB">
                                         <rect key="frame" x="0.0" y="49" width="560" height="200"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="338" translatesAutoresizingMaskIntoConstraints="NO" id="ZH0-b8-8qO">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="338" translatesAutoresizingMaskIntoConstraints="NO" id="ZH0-b8-8qO">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="200"/>
                                                 <animations/>
                                                 <constraints>
@@ -242,7 +245,7 @@
                                                     <constraint firstAttribute="height" constant="120" id="iaG-d1-J6R"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="UEb-0o-uQu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="UEb-0o-uQu">
                                                 <rect key="frame" x="120" y="0.0" width="440" height="200"/>
                                                 <animations/>
                                                 <string key="text">They fly around on moonless nights and attack careless prey. Nothing can beeat them in a battle in the dark. They fly around on moonless nights and attack careless prey. Nothing can beeat them in a battle in the dark. They fly around on moonless nights and attack careless prey. Nothing can beeat them in a battle in the dark. </string>
@@ -256,31 +259,31 @@
                                             <constraint firstAttribute="height" constant="200" id="vn8-m1-pBp"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="z62-ir-Dw6">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="z62-ir-Dw6">
                                         <rect key="frame" x="0.0" y="269" width="560" height="0.0"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-j9-9e9">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0a3-j9-9e9">
                                                 <rect key="frame" x="0.0" y="0.0" width="99" height="0.0"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Grass / Psychic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ3-Z9-C8m">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Grass / Psychic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZ3-Z9-C8m">
                                                 <rect key="frame" x="99" y="0.0" width="250" height="0.0"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mx-c3-xVV">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Mx-c3-xVV">
                                                 <rect key="frame" x="349" y="0.0" width="156" height="0.0"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="101" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-gH-uUh">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="101" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQ7-gH-uUh">
                                                 <rect key="frame" x="505" y="0.0" width="55" height="0.0"/>
                                                 <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -434,7 +437,18 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="attackLbl" destination="38H-WD-ul5" id="Uxn-Qx-n4P"/>
+                        <outlet property="currentEvoImg" destination="GpG-t3-LtJ" id="NYc-H9-rbf"/>
+                        <outlet property="defenseLbl" destination="iQ7-gH-uUh" id="Txc-UH-QMi"/>
+                        <outlet property="descriptionLbl" destination="UEb-0o-uQu" id="bJo-lf-QhQ"/>
+                        <outlet property="evoLbl" destination="8ik-UM-dzi" id="5dp-yo-QVm"/>
+                        <outlet property="heightLbL" destination="wWn-u7-tKe" id="NgZ-R1-5ho"/>
+                        <outlet property="mainImg" destination="ZH0-b8-8qO" id="guh-4v-bjc"/>
                         <outlet property="nameLbl" destination="khq-BQ-GLw" id="Mqr-4Z-hrE"/>
+                        <outlet property="nextEvoImg" destination="t5E-59-omR" id="PRm-ny-Q9C"/>
+                        <outlet property="pokedexLbl" destination="Ex0-8H-i65" id="ERP-qP-Lir"/>
+                        <outlet property="typeLbl" destination="VZ3-Z9-C8m" id="3PC-V8-tls"/>
+                        <outlet property="weightLbl" destination="dgT-IE-nGQ" id="Dpc-kw-cbT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTA-ot-GhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
