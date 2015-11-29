@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Pokemon.ttf">
+            <string>PokemonSolidNormal</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -24,9 +29,39 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n0b-CH-hQo">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="58"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mC0-dV-UR6">
+                                        <rect key="frame" x="215" y="8" width="170" height="42"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="170" id="kLz-5I-fhx"/>
+                                            <constraint firstAttribute="height" constant="42" id="pOg-G8-vvm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NZ-KY-azT">
+                                        <rect key="frame" x="560" y="18" width="32" height="32"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="HLq-U1-aef"/>
+                                            <constraint firstAttribute="height" constant="32" id="tVL-cz-HUZ"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="music"/>
+                                        <connections>
+                                            <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="flT-Wo-CqU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="1NZ-KY-azT" firstAttribute="top" secondItem="n0b-CH-hQo" secondAttribute="top" constant="18" id="C6S-lT-0V7"/>
+                                    <constraint firstItem="mC0-dV-UR6" firstAttribute="centerY" secondItem="n0b-CH-hQo" secondAttribute="centerY" id="QFA-Dn-MRx"/>
+                                    <constraint firstAttribute="trailing" secondItem="1NZ-KY-azT" secondAttribute="trailing" constant="8" id="Qw3-1l-gq8"/>
+                                    <constraint firstItem="mC0-dV-UR6" firstAttribute="centerX" secondItem="n0b-CH-hQo" secondAttribute="centerX" id="d77-Qy-B1O"/>
                                     <constraint firstAttribute="height" constant="58" id="hZs-wV-ZU5"/>
                                 </constraints>
                             </view>
@@ -128,11 +163,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388" y="363"/>
+            <point key="canvasLocation" x="399" y="360"/>
         </scene>
     </scenes>
     <resources>
         <image name="297" width="120" height="120"/>
         <image name="bg" width="1920" height="1200"/>
+        <image name="music" width="128" height="128"/>
     </resources>
 </document>
