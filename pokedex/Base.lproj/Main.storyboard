@@ -234,7 +234,7 @@
                                         </segments>
                                         <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="g7b-Al-NEB">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g7b-Al-NEB">
                                         <rect key="frame" x="0.0" y="49" width="560" height="200"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="338" translatesAutoresizingMaskIntoConstraints="NO" id="ZH0-b8-8qO">
@@ -245,8 +245,8 @@
                                                     <constraint firstAttribute="height" constant="120" id="iaG-d1-J6R"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="UEb-0o-uQu">
-                                                <rect key="frame" x="120" y="0.0" width="440" height="200"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="UEb-0o-uQu">
+                                                <rect key="frame" x="125" y="0.0" width="435" height="200"/>
                                                 <animations/>
                                                 <string key="text">They fly around on moonless nights and attack careless prey. Nothing can beeat them in a battle in the dark. They fly around on moonless nights and attack careless prey. Nothing can beeat them in a battle in the dark. They fly around on moonless nights and attack careless prey. Nothing can beeat them in a battle in the dark. </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
